@@ -22,7 +22,3 @@ function openPage(url) {
     path.innerText = url.replace(/\//g, ' > ').replace(/_/g, ' ').replace(/\b[a-z]/g, function(l) { return l.toUpperCase(); }).replace(/.html/gi, '').replace(/.php/gi, '');
     return true;
 }
-
-function logout() {
-	
-}
