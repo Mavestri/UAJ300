@@ -42,7 +42,7 @@
 <?php
 
     if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0) {
-        require_once "require_once('./inc/dbinfo.php');";
+        require_once "require_once('/res/php/dbinfo.php');";
         $connection = mysqli_connect($dbserver, $dbusername, $dbpassword, $database);
         $title = filter_var(trim($_POST['journalTitle']), FILTER_SANITIZE_STRING);  
         $fileName = $_FILES['userfile']['name'];
