@@ -39,21 +39,24 @@
                         <li><a href="#" class="active2" onclick="return openPage('author/authorDash.php')">My Journals</a></li>
                     </ul>
                 <li>
-                    <a href="#" id="reviewerMenu" class="active1" onclick="return openSubmenu(this.id);"><i class="fas fa-user"></i>Reviewer</a>
+                    <a href="#" id="reviewerMenu" class="active1" onclick="return openSubmenu(this.id);"><i class="fas fa-user-cog"></i>Reviewer</a>
                     <ul id="reviewer-stories">
                         <li><a href="#" class="active2">My Pending Journals</a></li>
                         <li><a href="#" class="active2">All Pending Journals</a></li>
                         <li><a href="#" class="active2">My Recommendations</a></li>
                     </ul>
                 <li>
-                    <a href="#" id="editorMenu" class="active1" onclick="return openSubmenu(this.id);"><i class="fas fa-user"></i>Editor</a>
+                    <a href="#" id="editorMenu" class="active1" onclick="return openSubmenu(this.id);"><i class="fas fa-user-edit"></i>Editor</a>
                     <ul id="editor-stories">
-                        <li><a href="#" class="active2">Edit Users</a></li>
                         <li><a href="#" class="active2">Assign Reviewers</a></li>
                         <li><a href="#" class="active2">Journals Under Review </a></li>
                         <li><a href="#" class="active2">Reviewed Journals</a></li>
                     </ul>
-
+                <li>
+                    <a href="#" id="adminMenu" class="active1" onclick="return openSubmenu(this.id);"><i class="fas fa-user-shield"></i>Admin</a>
+                    <ul id="admin-stories">
+                        <li><a href="#" class="active2">Edit Users</a></li>
+                    </ul>
                 <li><a href="#" class="active1"><i class="fas fa-cog"></i>Settings</a></li>
                 <li onclick="window.location.href='/login/logout.php';" style="cursor: pointer;"><a class="active1"> <i class="fas fa-sign-out-alt"></i>Logout</a></li>
             </ul>
