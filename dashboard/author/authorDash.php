@@ -32,7 +32,7 @@
             <tr>
                 <td> <a class href="downloadArticle.php?articleid=<?php echo $row['article_id'] ?>"> <?php echo $row['title'] ?></a> </td>
                 <td> <?php echo $row['date'] ?></td>
-                <td> <?php echo "Fill in later"?>//if ($row['editorfeedback'] == "NULL") {echo "Awaiting feedback";} else {echo "Feedback Available";} ?></td>
+                <td> <?php echo "Fill in later"?></td>
                 <td> <?php echo $row['status'] ?> </td>
             </tr>
         <?php endwhile; ?>
