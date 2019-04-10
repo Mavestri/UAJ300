@@ -1,7 +1,8 @@
 let submenus = {
     authorMenu: document.getElementById("author-stories"),
     reviewerMenu: document.getElementById("reviewer-stories"),
-    editorMenu: document.getElementById("editor-stories")
+    editorMenu: document.getElementById("editor-stories"),
+    adminMenu: document.getElementById("admin-stories")
 }
 
 let embedFrame = document.getElementById("contentEmbed");
@@ -18,10 +19,6 @@ function openSubmenu(menuId) {
 
 function openPage(url) {
     embedFrame.src = url;
-    path.innerText = url.replace(/\//g, ' > ').replace(/_/g, ' ').replace(/\b[a-z]/g, function(l) { return l.toUpperCase(); }).replace(/.html/gi, '');
+    path.innerText = url.replace(/\//g, ' > ').replace(/_/g, ' ').replace(/\b[a-z]/g, function(l) { return l.toUpperCase(); }).replace(/.html/gi, '').replace(/.php/gi, '');
     return true;
-}
-
-function logout() {
-	
 }
