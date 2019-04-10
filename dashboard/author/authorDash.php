@@ -6,19 +6,19 @@
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="authorDashStyle.css">
+    <link rel="stylesheet" type="text/css" href="../../res/css/dashModule.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
 </head>
 <body>
     
     
     <div id = "submittedV">
-    <h1> Your Submitted Journals</h1>    
-        <table align = center>
+        <table id = "t01" align = center>
+        <th colspan = "4"> My Submitted Journals </th>
         <tr>
             <th id = "leftC"> Title </th>
             <th> Date </th>
-            <th> Reviewer </th>
+            <th> Feedback </th>
             <th id = "rightC"> Status </th>
         </tr>
           <?php
@@ -32,7 +32,7 @@
             <tr>
                 <td> <a class href="downloadArticle.php?articleid=<?php echo $row['article_id'] ?>"> <?php echo $row['title'] ?></a> </td>
                 <td> <?php echo $row['date'] ?></td>
-                <td> <?php echo "Unassigned" ?></td>
+                <td> <?php echo "Fill in later"?>//if ($row['editorfeedback'] == "NULL") {echo "Awaiting feedback";} else {echo "Feedback Available";} ?></td>
                 <td> <?php echo $row['status'] ?> </td>
             </tr>
         <?php endwhile; ?>
