@@ -36,7 +36,7 @@
                     <a href="#" id="authorMenu" class="active1" onclick="return openSubmenu(this.id);"><i class="fas fa-user"></i>Author</a>
                     <ul id="author-stories">
                         <li><a href="#" class="active2" onclick="return openPage('author/submit_journal.php')">Submit Journal</a></li>
-                        <li><a href="#" class="active2">My Journals</a></li>
+                        <li><a href="#" class="active2" onclick="return openPage('author/authorDash.php')">My Journals</a></li>
                     </ul>
                 <li>
                     <a href="#" id="reviewerMenu" class="active1" onclick="return openSubmenu(this.id);"><i class="fas fa-user"></i>Reviewer</a>
