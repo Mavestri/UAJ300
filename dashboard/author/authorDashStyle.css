@@ -1,0 +1,127 @@
+html {
+    font-family: 'Lato', 'Arial', sans-serif;
+    /*height: 500px;*/
+    /*width: 500px;*/
+    font-size: 20px;
+}
+
+h1 {
+    text-align:center;
+   font-weight: 400;
+   margin-left: 30px;
+}
+table {
+    border-collapse: collapse;
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+}
+
+table th {
+    
+    text-align: left;
+    background-color: #007C41;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 15px 30px;
+}
+
+table td {
+    border: 1px solid #cbcbcb;
+    padding: 10px 10px;
+}
+
+table tr:nth-child(odd) td {
+    background-color: #e7edf0; 
+}
+
+
+table tr:nth-child(even) td {
+        background-color: #ffffff; 
+}
+
+#leftC {
+    border-top-left-radius: 20px;
+}
+
+#rightC {
+    border-top-right-radius: 20px; 
+}
+
+#submittedV {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+#textJournal {
+    float: left; 
+    margin-top: 40px; 
+    width: 100%;
+    text-align: center;
+}
+
+hr {
+    float: left; 
+    margin-top: 75px;
+    width: 50%;
+    border: 2px solid;
+    border-color: #b5b3b3;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 75px;
+    font-weight: 500;
+    text-decoration: none;   
+    border-radius: 150px;
+    color: #FFF;
+    font-size: 20px;
+  
+}
+
+#submit-btn {
+    margin-top: 15px;
+    border-radius: 150px;
+    background-color: #F9B117;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    color: #FFF;
+    font-size: 20px;
+    padding: 2px;
+}
+#btnBox {
+    text-align: center;
+}
+
+#articleEntry {
+    position: relative;
+    width: 1000px;
+    background-color: #fff;
+    height: 500px;
+    margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#title {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#titleBox {
+    margin-right: 581px;
+}
