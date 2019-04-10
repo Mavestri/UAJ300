@@ -42,14 +42,14 @@
 <?php
 
     if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0) {
-        require_once "require_once('/res/php/dbinfo.php');";
+        require_once('../../res/php/dbinfo.php');
         $connection = mysqli_connect($dbserver, $dbusername, $dbpassword, $database);
         $title = filter_var(trim($_POST['journalTitle']), FILTER_SANITIZE_STRING);  
         $fileName = $_FILES['userfile']['name'];
         $tmpName  = $_FILES['userfile']['tmp_name'];
         $fileSize = $_FILES['userfile']['size'];
         $fileType = $_FILES['userfile']['type'];
-        $date = date('Y-m-d H:i:s');
+       // $date = date('Y-m-d');
         $article_id = guidv4(openssl_random_pseudo_bytes(16));
         
         $fp      = fopen($tmpName, 'r');
@@ -57,8 +57,9 @@
         $content = addslashes($content);
         fclose($fp);
         
+       // $sessionID = $_SESSION['user'];
         $fileName = addslashes($fileName);
-        $query = "INSERT INTO article_data (article_id, title, status, date, author_id, 'filename','filetype','filesize','filebody') VALUES ('$article_id', '$title', 'Submitted','$date'," .$_SESSION['user'].", '$fileName', '$fileType', '$fileSize', '$content')";
+        $query = "INSERT INTO article_data (article_id, title, status, author_id, filename, filetype, filesize, filebody, date) VALUES ('$article_id','$title', 'Submitted', '{$_SESSION['user']}', '$fileName', '$fileType', '$fileSize', '$content', NOW())";
         $run_query = mysqli_query($connection, $query);
         
         if($run_query) {
@@ -69,8 +70,6 @@
          
     }
 
-    //Generates UUID
-//credit to Jack on stackoverflow
 function guidv4($data)
 {
     assert(strlen($data) == 16);
@@ -80,7 +79,5 @@ function guidv4($data)
 
     return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
 }
-    
-
 ?>
 
