@@ -37,10 +37,24 @@ table#t01 tr:nth-child(2)
 {
     background-color:#555;
 	color:white;
-
 }
+
+button {
+	font-family: 'Lato', 'Arial', sans-serif;
+	font-weight: bolder;
+	background-color: #ffdb05;
+	border: none;
+	color: white;
+	padding: 5px 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 10px;
+}
+
 body {
-  font-family: Arial;
+  font-family: 'Lato', 'Arial', sans-serif;
   padding: 10px;
   background: transparent;
 }
@@ -64,7 +78,7 @@ body {
 	padding: 30px;
 	color: #FFDB05;
   background: #007C41;	
-  width:65%;
+  width:100%;
   margin:auto;
   border-radius:0px 0px 25px 25px;
 	
@@ -74,7 +88,7 @@ body {
   overflow: hidden;
   background-color: #333;
   margin:auto;
-  width:65%;
+  width:100%;
 }
 
 /* Style the topnav links */
@@ -118,17 +132,8 @@ body {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	width: 65%;
- 
-
+	border-radius: 50%;
 }
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {

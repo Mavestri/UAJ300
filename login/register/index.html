@@ -2,13 +2,12 @@
 
 <html>
 	<head>
-
-	<title> University of Alberta Journal Submission System Login </title>
-		<link rel="stylesheet" type="text/css" href="/res/css/login.css">
+		<title> University of Alberta Journal Submission System Login </title>
+		<link rel="stylesheet" type="text/css" href="../../res/css/login.css">
 	</head>
 	<body>
 		<div class="loginbox" id="greyBox" style="height: 1150px; margin-top: 660px; margin-bottom: 50px;">
-			<img src="/res/img/logo.png" class="logo">
+			<img src="../../res/img/logo.png" class="logo">
 			<h1>Register</h1>
 			<form action="">
 				<p>Email</p>
@@ -289,92 +288,11 @@
 					<input type="checkbox" name="usertype" value="author"> Author
 					<input type="checkbox" name="usertype" value="reviewer"> Reviewer
 				</div>
-				<input type="submit" name="" value="Register">
+				<input type="submit" name="" value="Register" id="register-btn">
 				
 				<a href="/login">Return To Login</a><br>
 			</form>
-
 		</div>
 	</body>
-
-<script>
-	function check_pass() {
-		let pw = document.getElementById('pw');
-		let cp = document.getElementById('cp');
-		if (pw.value !== cp.value) {
-			document.getElementById('pw-error').style.display = 'block';
-		}
-		else if (pw.value === cp.value) {
-			document.getElementById('pw-error').style.display = 'none';
-		}
-	}
-	
-	var lowerCaseValid = false;
-	var upperCaseValid = false;
-	var numberValid = false;
-	var characterCountValid = false;
-	var myInput = document.getElementById('pw');
-	var letter = document.getElementById('letter');
-	var capital = document.getElementById('capital');
-	var number = document.getElementById('number');
-	var length = document.getElementById('length');
-// When the user starts to type something inside the password field
-function validatePassword() {
-document.getElementById('message').style.display = 'block'; 
-  // Validate lowercase letters
-  
-  var lowerCaseLetters = /[a-z]/g;
-  if(myInput.value.match(lowerCaseLetters)) {  
-    letter.classList.remove('invalid');
-    letter.classList.add('valid');
-	lowerCaseValid = true;
-	
-  } else {
-    letter.classList.remove('valid');
-    letter.classList.add('invalid');
-	lowerCaseValid = false;
-  }
-  
-  // Validate capital letters
-  var upperCaseLetters = /[A-Z]/g;
-  if(myInput.value.match(upperCaseLetters)) {  
-    capital.classList.remove('invalid');
-    capital.classList.add('valid');
-	upperCaseValid = true;
-  } else {
-    capital.classList.remove('valid');
-    capital.classList.add('invalid');
-	upperCaseValid = false;
-  }
-  // Validate numbers
-  var numbers = /[0-9]/g;
-  if(myInput.value.match(numbers)) {  
-    number.classList.remove('invalid');
-    number.classList.add('valid');
-	numberValid = true;
-  } else {
-    number.classList.remove('valid');
-    number.classList.add('invalid');
-	numberValid = false;
-  }
-  
-  // Validate length
-  if(myInput.value.length >= 8) {
-    length.classList.remove('invalid');
-    length.classList.add('valid');
-	characterCountValid = true;
-  } else {
-    length.classList.remove('valid');
-    length.classList.add('invalid');
-	characterCountValid = false;
-  }
-  if (lowerCaseValid == true && upperCaseValid == true && numberValid == true && characterCountValid == true) {
-		document.getElementById('message').style.display = 'none'; 
-		document.getElementById('greyBox').style.height = '1180px';
-  } else {
-		document.getElementById('message').style.display = 'block'; 
-		document.getElementById('greyBox').style.height = '1400px';
-  }  
-}
-</script>
+<script type="text/javascript" src="../../res/js/registerAccount.js"></script>
 </html>

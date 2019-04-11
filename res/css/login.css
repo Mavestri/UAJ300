@@ -2,7 +2,7 @@
 html {
 	margin: 0;
 	padding: 0;
-	background: url(/res/img/background1.jpg);
+	background: url(../img/background1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
