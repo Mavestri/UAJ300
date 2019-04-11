@@ -11,8 +11,8 @@
     <head>
         <link rel="stylesheet" type="text/css" href="/res/css/dash.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <title>UAJ300 - Dashboard</title>
     </head>
 
@@ -55,7 +55,9 @@
                 <li>
                     <a href="#" id="adminMenu" class="active1" onclick="return openSubmenu(this.id);"><i class="fas fa-user-shield"></i>Admin</a>
                     <ul id="admin-stories">
-                        <li><a href="#" class="active2">Edit Users</a></li>
+                        <li><a href="#" class="active2" onclick="return openPage('admin/requestToBeReviewer.php')">Edit Users</a></li>
+						<li><a href="#" class="active2" onclick="return openPage('admin/adminCreateAccount.html')">Create New Account</a></li>
+						<li><a href="#" class="active2" onclick="return openPage('admin/changeUserRoles.php')">Change User Roles</a></li>
                     </ul>
                 <li><a href="#" class="active1"><i class="fas fa-cog"></i>Settings</a></li>
                 <li onclick="window.location.href='/login/logout.php';" style="cursor: pointer;"><a class="active1"> <i class="fas fa-sign-out-alt"></i>Logout</a></li>
